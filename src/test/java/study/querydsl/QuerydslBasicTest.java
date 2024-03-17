@@ -14,12 +14,10 @@ import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.PersistenceUnit;
-import jakarta.persistence.TypedQuery;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 import study.querydsl.dto.MemberDto;
 import study.querydsl.dto.QMemberDto;
@@ -114,9 +112,9 @@ public class QuerydslBasicTest {
                 .fetch();
 
         //단건
-        Member fetchOne = queryFactory
-                .selectFrom(member)
-                .fetchOne();
+//        Member fetchOne = queryFactory
+//                .selectFrom(member)
+//                .fetchOne();
 
         //처음 한 건
         Member fetchFirst = queryFactory
